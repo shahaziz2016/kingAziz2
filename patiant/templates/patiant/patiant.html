@@ -1,0 +1,6 @@
+{% extends "personal/header.html" %}
+{% block content %}
+{% for ehr1 in object_list %}
+		<li><ul>{{ ehr1.appointmentDate|date:"Y-m-d" }}<a href="/patiant/{{ehr1.id}}">	{{ ehr1.name }}</a></ul></li>
+	{% endfor %}
+{% endblock %}
